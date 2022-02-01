@@ -1,15 +1,19 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        string str = to_string(x);
-        int s = 0, e = str.size()-1;
-        
-        while(s < e){
-            if(str[s] != str[e])
-                return false;
-            s++;
-            e--;
+        if (x < 0) {
+            return false;
         }
-        return true;
+        long n = 0;
+        
+        int temp = x;
+        while(temp > 0){
+            n = n * 10 + temp%10;
+            temp = temp/10;    
+        }
+        // cout << n;
+        if(n == x)
+            return true;
+        return false;
     }
 };
