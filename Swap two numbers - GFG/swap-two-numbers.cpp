@@ -11,12 +11,10 @@ class Solution{
 public:
     pair<int, int> get(int a, int b){
         //complete the function here
-        // int c = a + b;
-        // int d = a - b;
-        
-        // b = (c-d)/2;
-        // a = (c+d)/2;
-        return {b, a};
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        return {a, b};
         
     }
 };
