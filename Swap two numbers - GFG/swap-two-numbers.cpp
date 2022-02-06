@@ -14,7 +14,9 @@ public:
         int c = a + b;
         int d = a - b;
         
-        return {(c-d)/2, (c+d)/2};
+        b = (c-d)/2;
+        a = (c+d)/2;
+        return {b, a};
         
     }
 };
