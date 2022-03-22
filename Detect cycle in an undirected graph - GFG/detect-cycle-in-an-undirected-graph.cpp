@@ -14,7 +14,7 @@ class Solution {
         
         while(!q.empty()){
             int len = q.size();
-            while(len--){
+            // while(len--){
                 pair<int, int> ele = q.front();
                 q.pop();
                 
@@ -26,7 +26,7 @@ class Solution {
                         q.push({v, ele.first});
                     }
                 }
-            }
+            // }
         }
         return false;
     }
