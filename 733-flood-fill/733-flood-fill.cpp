@@ -9,12 +9,13 @@ public:
         
         int n = image.size();
         int m = image[0].size();
-        vector<vector<int>> vi(n, vector<int>(m, 0));
         
         int orgC = image[sr][sc];
+        if(orgC == newColor)
+            return image;
         
         image[sr][sc] = newColor;
-        vi[sr][sc] = 1;
+
         
         
         while(!q.empty()){
@@ -28,9 +29,7 @@ public:
                 int yy = y + move[i].second;
                 
                 
-                if(xx>=0 && xx<n && yy>=0 && yy<m && image[xx][yy]==orgC && vi[xx][yy] == 0){
-                    // cout << image[xx][yy]<<" ";
-                    vi[xx][yy] = 1;
+                if(xx>=0 && xx<n && yy>=0 && yy<m && image[xx][yy]==orgC){
                     image[xx][yy] = newColor;
                     q.push({xx, yy});
                 }
