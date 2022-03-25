@@ -5,7 +5,7 @@ using namespace std;
 
  // } Driver Code Ends
 long long countpath(int i, int j, int m, int n){
-    if(i == m-1 && j == n-1)
+    if(i == m-1 || j == n-1)
         return 1;
     if(i >= m || j>=n)
         return 0;
