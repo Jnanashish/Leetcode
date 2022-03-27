@@ -10,16 +10,18 @@ long long countpath(int i, int j, int m, int n){
     if(i >= m || j>=n)
         return 0;
         
-    return countpath(i+1,j,m,n) + countpath(i, j+1, m, n);
+    int a = countpath(i+1,j,m,n);
+    int b = countpath(i, j+1, m, n);
+    return a + b;
 }
 
 long numberOfPaths(int m, int n){
     // Code Here
-    long long cnt = 0;
+
     
-    cnt = countpath(0, 0, m, n);
+    return countpath(0, 0, m, n);
     
-    return cnt;
+    
 }
 
 
