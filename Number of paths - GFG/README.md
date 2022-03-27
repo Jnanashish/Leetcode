@@ -1,5 +1,5 @@
 # Number of paths
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">The problem is to count all the possible paths from top left to bottom right of a <strong>MxN</strong>&nbsp;matrix with the constraints that from each cell you can either move to <strong>right</strong> or <strong>down</strong>.</span></p>
 
